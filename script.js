@@ -31,21 +31,16 @@ function displayProjects(projects) {
 
 // Fetch and Search Projects
 async function fetchProjects() {
-    // const baseUrl = window.baseUrl;
     const searchValue = document.getElementById("searchBox").value.trim();
     console.log("Baseurl ", baseUrl);
     const apiUrl = searchValue ? `${baseUrl}?name=${encodeURIComponent(searchValue)}` : baseUrl;
-
     try {
         const response = await fetch(apiUrl);
         const projects = await response.json();
         if (response.ok) {
-            // alert("Project deleted successfully!");
-            // fetchProjects(); // Refresh table after deletion
             displayProjects(projects);
         } else {
-            console.error("failed to fetch");
-            
+            console.error("failed to fetch");     
         }
     } catch (error) {
         console.error("Error fetching data:", error);
@@ -69,6 +64,10 @@ async function deleteProject(projectId) {
     } catch (error) {
         console.error("Error deleting project:", error);
     }
+}
+
+function goToEditPage(projectId) {
+    window.location.href = `/edit/editProject.html?id=${projectId}`;
 }
 
 document.addEventListener("DOMContentLoaded", fetchProjects);

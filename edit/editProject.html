@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../output.css">
+    <title>Project | Edit Page</title>
+</head>
+<body>
+    <header class="p-6 bg-blue-500 text-white text-center text-xl font-bold">
+        Geospatial Project Finder
+    </header>
+    <div class="w-1/2 mx-auto bg-white shadow p-6 rounded mt-6">
+        <h2 class="text-xl font-bold mb-4">Edit Project</h2>
+        <label for="editName" class="block font-semibold">Project Name</label>
+        <input type="text" id="editName" class="border p-2 rounded w-full mb-4">
+        <label for="editDescription" class="block font-semibold">Project Description</label>
+        <input type="text" id="editDescription" class="border p-2 rounded w-full mb-4">
+        <button onclick="backToIndex()" class="bg-red-500 text-white p-2 rounded">
+            Cancel
+        </button>
+        <button onclick="updateProject()" class="bg-green-500 text-white p-2 rounded">
+            Save Changes
+        </button>
+    </div>
+
+    <script src="../config.js"></script>
+    <script src="editProject.js"></script>
+</body>
+</html>
