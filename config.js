@@ -1,0 +1,1 @@
+window.baseUrl = "https://682f0f6d746f8ca4a47fa0df.mockapi.io/api/v1/projects";

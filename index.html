@@ -1,11 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Home | Geospatial Project</title>
 </head>
 <body>
-    <h1>Home Geospatial project</h1>
+    <header class="p-6 bg-blue-500 text-white text-center text-xl font-bold">
+        Geospatial Project Finder
+    </header>
+    <!-- Search Box -->
+    <div class="flex justify-center mt-4">
+        <input type="text" id="searchBox" placeholder="Search by name..."
+               class="border p-2 rounded w-1/2">
+        <button onclick="fetchProjects()" class="bg-blue-500 text-white p-2 rounded ml-2">
+            Search
+        </button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <!-- Table Project -->
+    <div class="flex justify-center mt-4">
+        <table class="table-auto justify-center">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="projectTable">
+            </tbody>
+        </table>
+    </div>
+    <!-- <table class="table-auto border-collapse border border-gray-300 w-full mt-4">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="border border-gray-300 p-2">Name</th>
+                <th class="border border-gray-300 p-2">Description</th>
+            </tr>
+        </thead>
+        <tbody id="projectTable">
+        </tbody>
+    </table> -->
 </body>
 </html>
