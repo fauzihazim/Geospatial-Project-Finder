@@ -6,6 +6,9 @@ function parseIdUrl() {
 // Main function to initialize the map
 async function initMap() {
     const idProject = parseIdUrl();
+    if (!idProject) {
+        return console.error("Id is null");
+    }
     console.log("id project ", idProject);
     
     const apiUrl = `${baseUrl}/${idProject}`;

@@ -10,7 +10,7 @@ function displayProjects(projects) {
         number++;
         const table = `
             <tbody>
-                <tr>
+                <tr class="hover:bg-blue-200" onclick="goToDetailPage(${project.id})">
                     <td class="text-center p-4">${number}</td>
                     <td class="text-center p-4">${project.name}</td>
                     <td class="text-center p-4">${project.description}</td>
@@ -68,6 +68,10 @@ async function deleteProject(projectId) {
 
 function goToEditPage(projectId) {
     window.location.href = `/edit/editProject.html?id=${projectId}`;
+}
+
+function goToDetailPage(projectId) {
+    window.location.href = `/detail/detailProject.html?id=${projectId}`;
 }
 
 document.addEventListener("DOMContentLoaded", fetchProjects);
