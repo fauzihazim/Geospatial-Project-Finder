@@ -10,10 +10,10 @@ function displayProjects(projects) {
         number++;
         const table = `
             <tbody>
-                <tr class="hover:bg-blue-200" onclick="goToDetailPage(${project.id})">
-                    <td class="text-center p-4">${number}</td>
-                    <td class="text-center p-4">${project.name}</td>
-                    <td class="text-center p-4">${project.description}</td>
+                <tr class="hover:bg-blue-200">
+                    <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${number}</td>
+                    <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${project.name}</td>
+                    <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${project.description}</td>
                     <td class="border border-gray-300 p-2">
                         <button class="bg-red-500 text-white p-1 rounded" onclick="deleteProject(${project.id})">
                             Delete
