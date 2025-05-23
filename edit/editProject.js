@@ -8,8 +8,8 @@ async function updateProject() {
     const apiUrl = `${baseUrl}/${idProject}`;
     const updatedName = document.getElementById("editName").value.trim();
     const updatedDescription = document.getElementById("editDescription").value.trim();
-    const updatedLatitude = Number(document.getElementById("editLatitude").value.trim());
-    const updatedLongitude = Number(document.getElementById("editLongitude").value.trim());
+    const updatedLatitude = document.getElementById("editLatitude").value.trim();
+    const updatedLongitude = document.getElementById("editLongitude").value.trim();
     console.log("Update Latitude ", updatedLatitude, " Update Longitude ", updatedLongitude);
     
     if (!updatedName || !updatedDescription || updatedLatitude === "" || updatedLongitude === "" || isNaN(updatedLatitude) || isNaN(updatedLatitude)) {
