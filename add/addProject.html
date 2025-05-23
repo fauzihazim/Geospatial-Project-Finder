@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../output.css">
+    <title>Project | Add Page</title>
+</head>
+<body>
+    <header class="p-6 bg-blue-500 text-white text-center text-xl font-bold">
+        Geospatial Project Finder
+    </header>
+    <div class="w-1/2 mx-auto bg-white shadow p-6 rounded mt-6">
+        <h2 class="text-xl font-bold mb-4">Add Project</h2>
+        <label for="addName" class="block font-semibold">Project Name</label>
+        <input type="text" id="addName" class="border p-2 rounded w-full mb-4">
+        <label for="addDescription" class="block font-semibold">Project Description</label>
+        <input type="text" id="addDescription" class="border p-2 rounded w-full mb-4">
+        <label for="addLatitude" class="block font-semibold">Project Latitude</label>
+        <input type="number" id="addLatitude" class="border p-2 rounded w-full mb-4">
+        <label for="addLongitude" class="block font-semibold">Project Longitude</label>
+        <input type="number" id="addLongitude" class="border p-2 rounded w-full mb-4">
+        <button onclick="backToIndex()" class="bg-red-500 text-white p-2 rounded">
+            Cancel
+        </button>
+        <button onclick="updateProject()" class="bg-green-500 text-white p-2 rounded">
+            Save Changes
+        </button>
+    </div>
+
+    <script src="../config.js"></script>
+    <script src="addProject.js"></script>
+</body>
+</html>
