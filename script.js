@@ -14,6 +14,8 @@ function displayProjects(projects) {
                     <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${number}</td>
                     <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${project.name}</td>
                     <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${project.description}</td>
+                    <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${project.latitude}</td>
+                    <td class="text-center p-4" onclick="goToDetailPage(${project.id})">${project.longitude}</td>
                     <td class="border border-gray-300 p-2">
                         <button class="bg-red-500 text-white p-1 rounded" onclick="deleteProject(${project.id})">
                             Delete

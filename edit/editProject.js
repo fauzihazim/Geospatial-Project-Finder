@@ -8,7 +8,11 @@ async function updateProject() {
     const apiUrl = `${baseUrl}/${idProject}`;
     const updatedName = document.getElementById("editName").value.trim();
     const updatedDescription = document.getElementById("editDescription").value.trim();
-    if (!updatedName || !updatedDescription) {
+    const updatedLatitude = Number(document.getElementById("editLatitude").value.trim());
+    const updatedLongitude = Number(document.getElementById("editLongitude").value.trim());
+    console.log("Update Latitude ", updatedLatitude, " Update Longitude ", updatedLongitude);
+    
+    if (!updatedName || !updatedDescription || updatedLatitude === "" || updatedLongitude === "" || isNaN(updatedLatitude) || isNaN(updatedLatitude)) {
         alert("Please fill in all fields.");
         return;
     }
@@ -17,7 +21,7 @@ async function updateProject() {
         const response = await fetch(apiUrl, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name: updatedName, description: updatedDescription })
+            body: JSON.stringify({ name: updatedName, description: updatedDescription, latitude: updatedLatitude, longitude: updatedLongitude })
         });
 
         if (response.ok) {
@@ -34,23 +38,3 @@ async function updateProject() {
 function backToIndex() {
     window.location.href = "/";
 }
-
-// async function fetchEditingProject(projectId) {
-//     const apiUrl = `${baseUrl}/${projectId}`;
-
-//     try {
-//         const response = await fetch(apiUrl);
-//         const project = await response.json();
-//         if (response.ok) {
-//             console.log("Project: ", project);
-//             const projectContainer = document.getElementById("idProject");
-//             projectContainer.innerHTML = project.name;
-//         } else {
-//             console.error("failed to fetch");     
-//         }
-//     } catch (error) {
-//         console.error("Error fetching data:", error);
-//     }
-// }
-
-// document.addEventListener("DOMContentLoaded", parseIdUrl);
