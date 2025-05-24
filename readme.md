@@ -14,6 +14,7 @@ The frontend web app that allows user to search, view, add, and edit the geospas
 - Html
 - Tailwind css
 - Mock API
+- Docker
 
 ## Display
 | Feature         | Description | URL | Image |
