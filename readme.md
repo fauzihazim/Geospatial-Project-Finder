@@ -23,7 +23,17 @@ The frontend web app that allows user to search, view, add, and edit the geospas
 | Delete Project | Its allow user to delete the project | You can delete the project with click on marked button | ![Delete Project Map](https://freeimghost.net/images/2025/05/23/image7ac39b376a430a6c.png) |
 | View Project Map | Its allow user to view project map | http://127.0.0.1:your-port/detail/detailProject.html?id=idProject | ![View Project Map](https://freeimghost.net/images/2025/05/23/imagee3f97a5ef2229349.png) |
 
-## Running
+## Running with docker
+1. Clone
+``` git clone https://github.com/fauzihazim/Geospatial-Project-Finder.git ```
+2. Go to the folder
+``` cd Geospatial-Project-Finder ```
+3. Run Build
+``` docker build -t geospatial-project-finder . ```
+4. Run the project via Docker
+``` docker run -p 5002:5002 geospatial-project-finder ```
+
+## Running without docker
 1. Clone
 ``` git clone https://github.com/fauzihazim/Geospatial-Project-Finder.git ```
 2. Go to the folder
