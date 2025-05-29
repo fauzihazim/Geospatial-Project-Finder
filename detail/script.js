@@ -9,7 +9,6 @@ async function initMap() {
     if (!idProject) {
         return console.error("Id is null");
     }
-    console.log("id project ", idProject);
     
     const apiUrl = `${baseUrl}/${idProject}`;
     try {

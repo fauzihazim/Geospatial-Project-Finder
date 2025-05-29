@@ -34,7 +34,6 @@ function displayProjects(projects) {
 // Fetch and Search Projects
 async function fetchProjects() {
     const searchValue = document.getElementById("searchBox").value.trim();
-    console.log("Baseurl ", baseUrl);
     const apiUrl = searchValue ? `${baseUrl}?name=${encodeURIComponent(searchValue)}` : baseUrl;
     try {
         const response = await fetch(apiUrl);
