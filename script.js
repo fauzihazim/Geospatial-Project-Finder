@@ -67,6 +67,10 @@ async function deleteProject(projectId) {
     }
 }
 
+function gotoAddProject() {
+    window.location.href = '/add/addProject.html';
+}
+
 function goToEditPage(projectId) {
     window.location.href = `/edit/editProject.html?id=${projectId}`;
 }
